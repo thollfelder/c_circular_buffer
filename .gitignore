@@ -3,5 +3,5 @@
 # Folder IgnoreThisFolder
 IgnoreThisFolder/
 
-#Files to ignore
+# Ignores all Files with begin with "Ignore"
 Ignore*.*
