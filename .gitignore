@@ -1,0 +1,7 @@
+# Files to ignore which are only locally important
+
+# Folder IgnoreThisFolder
+IgnoreThisFolder/
+
+#Files to ignore
+Ignore.*
