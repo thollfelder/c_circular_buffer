@@ -1,11 +1,11 @@
-#ifndef MPI_QUEUE_H
-#define MPI_QUEUE_H
+#ifndef Queue_H
+#define Queue_H
 
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct MPI_Queue {
-    // Pointer for read and write positions
+typedef struct Queue {
+    // Pointer for read, write and buffer_end positions
     void* read_ptr;
     void* write_ptr;
     void* buffer_end;
@@ -19,16 +19,16 @@ typedef struct MPI_Queue {
     // Element size in byte
     size_t size;
 
-} MPI_Queue;
+} Queue;
 
-MPI_Queue* create_queue(size_t size, size_t capacity);
+Queue* create_queue(size_t size, size_t capacity);
 
-bool write_queue(MPI_Queue* queue, void* data);
+bool write_queue(Queue* queue, void* data);
 
-bool read_queue(MPI_Queue* queue, void* data);
+bool read_queue(Queue* queue, void* data);
 
-bool peek_queue(MPI_Queue* queue);
+bool peek_queue(Queue* queue);
 
-bool free_queue(MPI_Queue* queue);
+bool free_queue(Queue* queue);
 
 #endif

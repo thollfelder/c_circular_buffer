@@ -5,41 +5,11 @@
 
     "version": "0.2.0",
     "configurations": [
-/*
-        {
-            "name": "(mpirun) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "/usr/bin/mpirun",
-            "args": [
-                "-np",
-                "4",
-                "${fileDirname}/${fileBasenameNoExtension}.out"
-            ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-        },
-*/
-        {
-            "name": "mpirun active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "/usr/bin/mpirun",
-            "args": ["-np", "4", /*"--oversubscribe", */ "${fileDirname}/${fileBasenameNoExtension}.out"],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "preLaunchTask": "mpicc build active file",
-
-        },
         {
             "name": "gcc - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
